@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CathayCodeTask</string>
+    <string name="oops">Oops</string>
+    <string name="home_title">臺北市立動物園</string>
+    <string name="no_memo">無休館資訊</string>
+
+
 </resources>

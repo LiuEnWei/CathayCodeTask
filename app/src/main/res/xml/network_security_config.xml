@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+http://www.zoo.gov.tw 的圖片無法用 https 的方式取的圖片，
+因此必須開啟 http 通訊協定
+-->
+<network-security-config >
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

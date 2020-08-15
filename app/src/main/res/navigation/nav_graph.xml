@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:label="@string/home_title"
+        android:name="com.wayne.cathaycodetask.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.wayne.cathaycodetask.ui.category.CategoryFragment"
+        tools:layout="@layout/fragment_category">
+        <argument
+            android:name="category"
+            app:nullable="false"
+            app:argType="com.wayne.cathaycodetask.model.api.vo.Category"/>
+        <action
+            android:id="@+id/action_categoryFragment_to_plantFragment"
+            app:destination="@id/plantFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/plantFragment"
+        android:name="com.wayne.cathaycodetask.ui.plant.PlantFragment"
+        tools:layout="@layout/fragment_plant">
+    </fragment>
+
+</navigation>
