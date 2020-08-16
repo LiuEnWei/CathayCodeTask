@@ -1,6 +1,7 @@
 package com.wayne.cathaycodetask.ui
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        appBarConfig = AppBarConfiguration(setOf(R.id.homeFragment))
+        appBarConfig = AppBarConfiguration(setOf(R.id.splashFragment, R.id.homeFragment))
         toolbar.setupWithNavController(findNavController(), appBarConfig)
         setSupportActionBar(toolbar)
         setupActionBarWithNavController(findNavController(), appBarConfig)
@@ -27,6 +28,13 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         viewModel.title.observe(this, Observer {
             it?.let {
                 toolbar.title = it
+            }
+        })
+
+        viewModel.isToolbarShow.observe(this, Observer {
+            when (it) {
+                true -> toolbar.visibility = View.VISIBLE
+                else -> toolbar.visibility = View.GONE
             }
         })
     }

@@ -33,6 +33,7 @@ class HomeFragment: BaseFragment(R.layout.fragment_home), OnCategoryClickListene
         listCategory.addItemDecoration(requireContext().getRecyclerViewDivider(R.drawable.divider_category))
 
         mainViewModel.setTitle(getString(R.string.home_title))
+        mainViewModel.setToolbarShow(true)
 
         viewModel.categories.observe(viewLifecycleOwner, Observer {
             when (it) {

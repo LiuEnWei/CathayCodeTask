@@ -47,6 +47,7 @@ class CategoryFragment: BaseFragment(R.layout.fragment_category), OnPlantClickLi
                 viewModel.getPlant(name)
             }
         }
+        mainViewModel.setToolbarShow(true)
 
         plantAdapter = PlantAdapter(arrayListOf(), this)
         listPlant.adapter = plantAdapter

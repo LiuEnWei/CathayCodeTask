@@ -38,6 +38,7 @@ class PlantFragment: BaseFragment(R.layout.fragment_plant) {
                 mainViewModel.setTitle(name)
             }
         }
+        mainViewModel.setToolbarShow(true)
 
     }
 }
