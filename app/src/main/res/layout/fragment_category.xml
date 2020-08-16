@@ -3,13 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.google.android.material.imageview.ShapeableImageView
+        <ImageView
             android:id="@+id/imgPic"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -23,12 +24,10 @@
             android:id="@+id/textInfo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:textSize="12sp"
+            android:textSize="@dimen/text_14"
             android:textColor="@color/colorBlack"
             android:gravity="start"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/size_15"
             app:layout_constraintTop_toBottomOf="@id/imgPic"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -37,13 +36,53 @@
             android:id="@+id/textMemo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:textSize="12sp"
+            android:layout_marginTop="@dimen/size_5"
+            android:textSize="@dimen/text_12"
             android:textColor="@color/colorBlack"
             android:gravity="start"
+            android:layout_margin="@dimen/size_15"
             app:layout_constraintTop_toBottomOf="@id/textInfo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
+        <TextView
+            android:id="@+id/textCategoryType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_12"
+            android:textColor="@color/colorBlack"
+            android:gravity="start"
+            android:layout_marginStart="@dimen/size_15"
+            android:layout_marginEnd="@dimen/size_15"
+            app:layout_constraintTop_toBottomOf="@id/textMemo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- RecyclerView 的 height 在 ScrollView 裡面有bug -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/size_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textCategoryType"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <TextView
+                android:id="@+id/textPlantTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_15"
+                android:text="@string/plant_data"
+                android:textSize="@dimen/text_16"
+                android:textColor="@color/colorBlack"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listPlant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10"
+                android:nestedScrollingEnabled="false"
+                android:layout_below="@id/textPlantTitle"/>
+        </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

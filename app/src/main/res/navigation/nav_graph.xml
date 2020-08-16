@@ -29,6 +29,11 @@
         android:id="@+id/plantFragment"
         android:name="com.wayne.cathaycodetask.ui.plant.PlantFragment"
         tools:layout="@layout/fragment_plant">
+        <argument
+            android:name="plant"
+            app:nullable="false"
+            app:argType="com.wayne.cathaycodetask.model.api.vo.Plant"/>
+
     </fragment>
 
 </navigation>

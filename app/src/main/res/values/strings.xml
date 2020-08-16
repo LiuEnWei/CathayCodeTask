@@ -3,6 +3,10 @@
     <string name="oops">Oops</string>
     <string name="home_title">臺北市立動物園</string>
     <string name="no_memo">無休館資訊</string>
-
-
+    <string name="plant_data">植物資料</string>
+    <string name="plant_also_know">別名\n%s</string>
+    <string name="plant_brief">簡介\n%s</string>
+    <string name="plant_feature">辨認方式\n%s</string>
+    <string name="plant_use">功能性\n%s</string>
+    <string name="plant_update">最後更新：%s</string>
 </resources>

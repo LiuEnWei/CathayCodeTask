@@ -7,9 +7,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="shapeRoundedCorner5dp">
+    <style name="shapeRoundedCorner5">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">5dp</item>
+        <item name="cornerSize">@dimen/size_5</item>
     </style>
 
 </resources>

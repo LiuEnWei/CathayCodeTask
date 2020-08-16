@@ -32,7 +32,7 @@ class HomeFragment: BaseFragment(R.layout.fragment_home), OnCategoryClickListene
         listCategory.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL,false)
         listCategory.addItemDecoration(requireContext().getRecyclerViewDivider(R.drawable.divider_category))
 
-        mainViewModel.title.value = getString(R.string.home_title)
+        mainViewModel.setTitle(getString(R.string.home_title))
 
         viewModel.categories.observe(viewLifecycleOwner, Observer {
             when (it) {

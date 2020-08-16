@@ -7,5 +7,6 @@ class Constant {
         const val PLANT_SCOPE = "resourceAquire"
         const val PLANT_LIMIT = 1000
         const val PLANT_OFFSET = 0
+        const val ALL_CATEGORY = "全園普遍分佈"
     }
 }
